@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es2015",
     "rootDir": "src",
-    "outDir": "built"
+    "outDir": "built",
+    "module": "commonjs"
   },
   "exclude": [
     "node_modules","built"
