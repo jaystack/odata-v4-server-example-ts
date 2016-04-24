@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/tsc src/server.ts --outDir built",
+    "postinstall": "node_modules/.bin/tsd reinstall && npm run build",
+    "start": "node built/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "tsd": "^0.6.5",
+    "typescript": "^1.8.10"
   }
 }
