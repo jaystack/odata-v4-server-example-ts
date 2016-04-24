@@ -5,17 +5,13 @@ import { MongoClient, Db } from 'mongodb'
 import { createFilter } from 'odata-v4-mongodb'
 
 const app = express()
-
 const mongocn = process.env.MONGO_URL || "mongodb://localhost:27017/zeddb"
+
 MongoClient
   .connect(mongocn)
   .then(db => startDataService(db))
-  .then(db => seedInitData(db))
-
-
 
 function startDataService(db: Db) {
-
   app.get("/api/products", (req, res, next) => {
     let filter = createFilter(req.query.$filter || '')
     console.log("filtering products: " + JSON.stringify(filter))
@@ -25,9 +21,8 @@ function startDataService(db: Db) {
       .then(products => res.json(products))
       .catch(next)
   })
-
-  console.log("Data service started");
-  return db;
+  console.log("Data service started")
+  return seedInitData(db)
 }
 
 function seedInitData(db:Db) {
