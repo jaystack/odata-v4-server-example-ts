@@ -7,13 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/.bin/tsc",
     "postinstall": "node_modules/.bin/tsd reinstall && npm run build",
-    "start": "node built/server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
     "mongodb": "^2.1.16",
+    "odata-v4-mongodb": "^0.1.1",
     "tsd": "^0.6.5",
     "typescript": "^1.8.10"
   }

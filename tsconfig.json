@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
     "target": "es2015",
-    "rootDir": "src",
-    "outDir": "built",
     "module": "commonjs"
   },
   "exclude": [
-    "node_modules","built"
+    "node_modules","lib/**/*.js"
   ]
 
 }

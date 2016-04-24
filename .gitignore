@@ -1,3 +1,6 @@
 node_modules
 built
 typings
+
+server.js
+servers/**/*.js
