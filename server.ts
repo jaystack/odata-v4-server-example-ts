@@ -35,7 +35,7 @@ function seedInitData(db:Db) {
   products.count({}).then( result => {
     if (!result) {
       console.log("seeding db")
-      products.insertMany(require('./seed.json') )
+      products.insertMany(require('./data/seed.json') )
     }
   })
 }
