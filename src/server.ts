@@ -23,6 +23,16 @@ app.get('/insert', (req, res) => {
     })
 })
 
+app.get('/getall', (req, res) => {
+  db.collection("users").find({})
+    .toArray().then(r => {
+      res.json(r)
+    })
+    .catch(e => {
+      res.status(500).json(e)
+    })
+})
+
 app.get("/test", (req, res) => {
   res.send("OK")
 })
