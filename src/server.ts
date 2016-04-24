@@ -10,7 +10,7 @@ const app = express()
 //   console.log("mongodb connected");
 //   db = _db;
 // })
-console.log("@#@#@#", process.env.MONGO_URL)
+//console.log("@#@#@#", process.env.MONGO_URL)
 
 // app.get('/insert', (req, res) => {
 //   db.collection("users").insertOne({name:'zp'})
