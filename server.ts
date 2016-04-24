@@ -9,8 +9,8 @@ const app = express()
 const mongocn = process.env.MONGO_URL || "mongodb://localhost:27017/zeddb"
 MongoClient
   .connect(mongocn)
-  .then(startDataService)
-  .then(seedInitData)
+  .then(db => startDataService(db))
+  .then(db => seedInitData(db))
 
 
 
